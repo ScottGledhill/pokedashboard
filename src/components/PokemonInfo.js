@@ -2,11 +2,11 @@ import React from 'react';
 import { Radar } from 'react-chartjs';
 
 const PokemonInfo = ({pokemon}) => {
-  const labels = pokemon.stats.map((info)) => {
+  const labels = pokemon.stats.map((info) => {
     return info.stat.name
   });
 
-  const data = pokemon.stats.map((info)) => {
+  const data = pokemon.stats.map((info) => {
     return info.base_stat;
   });
 
@@ -23,5 +23,12 @@ const PokemonInfo = ({pokemon}) => {
         pointHoverBorderColor: "rgba(255,99,132,1)"
       }
     ]
-  }
+  };
+  return (
+    <div>
+    <Radar data={chartData} width="300" height="250"/>
+    </div>
+  )
 }
+
+export default PokemonInfo
