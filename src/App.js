@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
 import PokeList from './components/PokeList';
+import SelectItemsPerPageButtons from './SelectItemsPerPageButtons';
 import { Col, Pagination } from 'react-bootstrap/lib/';
+
 
 class App extends Component {
 
@@ -20,6 +22,7 @@ class App extends Component {
 
     this.loadPokemon = this.loadPokemon.bind(this);
     this.handlePaginationSelect = this.handlePaginationSelect.bind(this);
+    this.handleLimitChange = this.handleLimitChange.bind(this);
   }
 
   loadPokemon(url) {
