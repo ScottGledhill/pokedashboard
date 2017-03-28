@@ -14,7 +14,7 @@ class App extends Component {
 
     this.state = {
       pokemon: [],
-      activePage: 0,
+      activePage: 1,
       limit: 50,
       offset: 0,
       totalPages: 0
@@ -52,6 +52,9 @@ class App extends Component {
     console.log(selectedPage);
     let offset = this.state.limit * selectedPage;
     this.loadPokemon(`${this.props.baseUrl}/pokemon/?limit=${this.state.limit}&offset=${offset}`);
+    this.setState ({
+      activePage: selectedPage
+    })
   }
 
   handleLimitChange(event) {
