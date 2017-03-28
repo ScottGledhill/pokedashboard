@@ -17,4 +17,4 @@ const PokeList = ({listOfPokemon}) => {
   )
 }
 
-export default Pokelist;
+export default PokeList;

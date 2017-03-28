@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
+import PokeList from './components/PokeList'
+import { Col } from 'react-bootstrap/lib/'
 
 class App extends Component {
 
