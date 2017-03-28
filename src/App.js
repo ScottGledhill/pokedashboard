@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
 import PokeList from './components/PokeList';
-import SelectItemsPerPageButtons from './SelectItemsPerPageButtons';
+import SelectItemsPerPageButtons from './components/SelectItemsPerPageButtons';
 import { Col, Pagination } from 'react-bootstrap/lib/';
 
 
@@ -54,6 +54,17 @@ class App extends Component {
     this.loadPokemon(`${this.props.baseUrl}/pokemon/?limit=${this.state.limit}&offset=${offset}`);
   }
 
+  handleLimitChange(event) {
+    console.log(event.target.innerHTML);
+    this.setState({
+      limit: +event.target.innerHTML || this.state.count,
+      activePage: 1
+    }, () => {
+      this.loadPokemon(`${this.props.baseUrl}/pokemon/?limit=${this.state.limit}&offset=0`);
+    })
+  }
+
+
   render() {
     return (
       <div className="App">
@@ -62,6 +73,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
 
+        <SelectItemsPerPageButtons options={[10,50,100,200]}  selectedValue={this.state.limit} allValue={this.state.count} onOptionSelected={this.handleLimitChange} />
         <Col sm={8} md={10} smOffset={2} mdOffset={1} >
           <PokeList listOfPokemon={this.state.pokemon} />
         </Col>
