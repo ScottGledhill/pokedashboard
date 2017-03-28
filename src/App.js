@@ -104,9 +104,10 @@ class App extends Component {
           activePage={this.state.activePage}
           onSelect={this.handlePaginationSelect}
           totalPages={this.state.totalPages}
+          openModal={this.handleModalOpen} 
           />
 
-        <PokemonModal openModal={this.handleModalOpen} closeModal={this.handleModalClose} showModal={this.state.showModal}/>
+        <PokemonModal closeModal={this.handleModalClose} showModal={this.state.showModal}/>
       </div>
     );
   }
