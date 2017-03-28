@@ -89,18 +89,6 @@ class App extends Component {
           onSelect={this.handlePaginationSelect}
           totalPages={this.state.totalPages}
           />
-        {/* <SelectItemsPerPageButtons options={[10,50,100,200]}  selectedValue={this.state.limit} allValue={this.state.count} onOptionSelected={this.handleLimitChange} />
-        <Col sm={8} md={10} smOffset={2} mdOffset={1} >
-          <PokeList listOfPokemon={this.state.pokemon} />
-        </Col>
-        <Col sm={12} >
-          <Pagination
-            bsSize="small"
-            items={this.state.totalPages}
-            activePage={this.state.activePage}
-            onSelect={this.handlePaginationSelect}
-          />
-        </Col> */}
       </div>
     );
   }
