@@ -8,7 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-  }
+    this.loadPokemon = this.loadPokemon.bind(this;)
+    }
+
+    loadPokemon(url) {
+      fetch('$(this.props.baseUrl)')
+    }
+
   render() {
     return (
       <div className="App">
