@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
-let baseUrl = 'http://pokeapi.co/api/v2/'
+let baseUrl = 'http://pokeapi.co/api/v2'
 
 ReactDOM.render(
-  <App />,
+  <App baseUrl={baseUrl}/>,
   document.getElementById('root')
 );
