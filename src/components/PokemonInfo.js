@@ -1,9 +1,12 @@
 import React from 'react';
 import { Radar } from 'react-chartjs';
 
+let capitalize = (string) {
+  return string.charAt(0).toUppercase + string.slice(1)
+}
 const PokemonInfo = ({pokemon}) => {
   const labels = pokemon.stats.map((info) => {
-    return info.stat.name;
+    return capitalize(info.stat.name);
   });
 
   const data = pokemon.stats.map((info) => {
