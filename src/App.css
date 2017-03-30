@@ -39,3 +39,7 @@ button.PokeList-item.list-group-item {
 .Aligner-item {
   max-width: 50%;
 }
+
+#contained-modal-title {
+  text-transform: capitalize;
+}
