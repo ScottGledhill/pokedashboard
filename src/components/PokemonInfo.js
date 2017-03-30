@@ -3,7 +3,7 @@ import { Radar } from 'react-chartjs';
 
 const PokemonInfo = ({pokemon}) => {
   const labels = pokemon.stats.map((info) => {
-    return info.stat.name
+    return info.stat.name;
   });
 
   const data = pokemon.stats.map((info) => {
@@ -25,8 +25,9 @@ const PokemonInfo = ({pokemon}) => {
     ]
   };
   return (
-    <div>
-    <Radar data={chartData} width="300" height="250"/>
+    <div className = 'Aligner'>
+      <img className='Aligner-item' src={pokemon.sprites.front_default} />
+    <Radar className='Aligner-item'data={chartData} width="300" height="250"/>
     </div>
   )
 }

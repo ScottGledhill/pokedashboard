@@ -9,7 +9,7 @@ const PokemonModal = ({closeModal, showModal, pokemon}) => {
        show={showModal}
        onHide={closeModal} >
        <Modal.Header closeButton>
-         <Modal.Title id="contained-modal-title">Contained Modal</Modal.Title>
+         <Modal.Title id="contained-modal-title">{pokemon !== null ? pokemon.name : 'loading...'}</Modal.Title>
        </Modal.Header>
        <Modal.Body>
          { pokemon !== null ?
